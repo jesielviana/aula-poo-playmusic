@@ -1,4 +1,4 @@
-# Aplicativo de músicas (Spotify)
+# Aplicativo de músicas (PlayMusic)
 
 ## Classes
 - Musica
