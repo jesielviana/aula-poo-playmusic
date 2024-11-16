@@ -2,6 +2,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -15,13 +16,13 @@ public class App {
         Musica musica1 = new Musica();
         musica1.setNome("Californication");
         musica1.setDuracao(120);
-        musica1.setArquivoAudio("/home/jesielviana/dev/aulas/aula-poo/Red-Hot-Chili-Peppers-Californication.wav");
+        musica1.setArquivoAudio("./assets/Red-Hot-Chili-Peppers-Californication.wav");
         musica1.setGenero("Rock");
 
         Musica musica2 = new Musica();
         musica2.setNome("Otherside");
         musica2.setDuracao(120);
-        musica2.setArquivoAudio("/home/jesielviana/dev/aulas/aula-poo/Red-Hot-Chili-Peppers-Otherside.wav");
+        musica2.setArquivoAudio("./assets/Red-Hot-Chili-Peppers-Otherside.wav");
         musica2.setGenero("Rock");
 
         Album album1 = new Album();
@@ -56,6 +57,7 @@ public class App {
             }
         });
 
+        ImageIcon icon = new ImageIcon("./assets/music.png");
         // Exibe um JOptionPane com o botão Play/Stop
         JOptionPane.showOptionDialog(
                 null,
@@ -63,7 +65,7 @@ public class App {
                 "PlayMusic",
                 JOptionPane.DEFAULT_OPTION,
                 JOptionPane.PLAIN_MESSAGE,
-                null,
+                icon,
                 new Object[] { playStopButton }, playStopButton);
 
         // Fecha o clip de áudio ao encerrar o programa
